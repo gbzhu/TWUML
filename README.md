@@ -1,2 +1,2 @@
 # TWUML
-Implement of some ML algorithm.
+Implementation of some ML algorithms.

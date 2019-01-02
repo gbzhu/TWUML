@@ -1,5 +1,7 @@
 import numpy as np
 
+FILE_PATH = "data/hw1_15_train.dat"
+
 
 def init_data(path: str):
     data = []
@@ -40,8 +42,7 @@ def PLA(data, d, l):
 
 
 if __name__ == '__main__':
-    file_path = "data/hw1_15_train.dat"
-    data = init_data(path=file_path)
+    data = init_data(path=FILE_PATH)
     # 数据维度
     d_data = len(data[0]) - 1
     # 数据的组数

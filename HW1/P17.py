@@ -13,7 +13,7 @@ times = []
 for i in range(2000):
     # print(i)
     random.shuffle(data)
-    times.append(P15.PLA(data=data, d=d_data, l=l_data, k=1.0)[1])
+    times.append(P15.PLA(data=data, d=d_data, l=l_data, k=0.5)[1])
 plt.hist(times, normed=True)
 plt.xlabel("Number of Iterations")
 plt.title("Average run times : " + str(sum(times) / 2000))

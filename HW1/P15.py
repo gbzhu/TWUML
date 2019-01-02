@@ -25,14 +25,14 @@ def judge(data, w, d):
     return False
 
 
-def PLA(data, d, l):
+def PLA(data, k, d, l):
     w = np.zeros(d)
     index = 0
     time = 0
     while judge(data=data, w=w, d=d):
         x = data[index]
         if sign(np.dot(x[:d], w)) * x[-1] < 0:
-            w += x[:d] * x[-1]
+            w += x[:d] * x[-1] * k
             time += 1
         index += 1
         if index >= l:
@@ -47,5 +47,5 @@ if __name__ == '__main__':
     d_data = len(data[0]) - 1
     # 数据的组数
     l_data = len(data)
-    w, t, i = PLA(data=data, d=d_data, l=l_data)
+    w, t, i = PLA(data=data, d=d_data, l=l_data, k=1.0)
     print(w, t, i)
